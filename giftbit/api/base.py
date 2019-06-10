@@ -15,7 +15,7 @@ class APIBase:
 
   def _request(self, resource, method='GET', **kwargs):
     headers = {
-      'Authentication': f'Bearer {self.api_token}',
+      'Authorization': f'Bearer {self.api_token}',
       'Content-Type': 'application/json',
     }
 
