@@ -9,8 +9,8 @@ class CampaignMixin(APIBase):
       contacts,
       price_in_cents,
       brand_codes,
-      expiry,
       campaign_id,
+      expiry=None,
       message=None,
       subject=None,
       gift_template=None,
@@ -22,7 +22,6 @@ class CampaignMixin(APIBase):
       'contacts': contacts,
       'price_in_cents': price_in_cents,
       'brand_codes': brand_codes,
-      'expiry': expiry,
       'id': campaign_id,
     }
 
@@ -32,6 +31,9 @@ class CampaignMixin(APIBase):
 
     if gift_template:
       json['gift_template'] = gift_template
+
+    if expiry:
+      json['expiry'] = expiry
 
     return self.post(
       'campaign',
