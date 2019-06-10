@@ -6,9 +6,9 @@ class APIBase:
     self.api_token = api_token
 
     if testbed:
-      self.base_url = 'https://api-testbed.giftbit.com/papi/v1'
+      self.base_url = 'https://api-testbed.giftbit.com/papi/v1/'
     else:
-      self.base_url = 'https://api.giftbit.com/papi/v1'
+      self.base_url = 'https://api.giftbit.com/papi/v1/'
 
   def _url(self, resource):
     return urljoin(self.base_url, resource)

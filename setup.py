@@ -7,7 +7,7 @@ with open('README.md', 'r') as f:
 
 setup(
   name='giftbit-api',
-  version='0.1.1',
+  version='0.1.2',
   description='A simplistic API client for Giftbit',
   long_description=readme_content,
   long_description_content_type='text/markdown',
