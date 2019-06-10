@@ -22,12 +22,16 @@ class APIBase:
     if kwargs.get('headers'):
       headers.update(kwargs.get('headers'))
 
-    return requests.request(
+    response = requests.request(
       method,
       self._url(resource),
       **kwargs,
       headers=headers,
-    ).json()
+    )
+
+    response.raise_for_status()
+
+    return response.json()
 
   def _make_request(self, method):
     def inner(*args, **kwargs):
