@@ -4,6 +4,12 @@
 
     pip install giftbit-api
 
+## Usage
+
+    from giftbit import GiftbitClient
+
+    client = GiftbitClient('api_token', testbed=True)
+
 ## Documentation
 
-Available on [ReadTheDocs](https://giftbit-api.readthedocs.io/en/latest/)
+Coming soon!
